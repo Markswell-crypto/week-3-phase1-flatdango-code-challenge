@@ -1,0 +1,101 @@
+/* global styling here */
+body {
+    background-color: #1c2851;
+    font-family: 'Times New Roman', Times;
+    color: black;
+}
+
+/* Navigation Bar Styles */
+.heading {
+    background-color: #1644db;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    height: 20%;
+    font-family: monospace;
+    font-weight: 600;
+}
+#spanhead{
+    width: auto;
+    background-color: beige;
+    color:rgb(237, 33, 11);
+    font-family: fantasy;
+    font-style: italic;
+    font-size: 40px;
+}
+#subtitle {
+    font-size: 18px;
+    color:rgb(80, 22, 15);
+    font-weight: 600;
+    font-style: italic;
+    font-family: cursive;
+}
+h3{
+    font-size: 18px;
+    color:rgb(80, 22, 15);
+    font-weight: 600;
+    font-family: cursive;
+    text-align: center;
+}
+
+/* Left Menu Styles */
+.list-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-left: 10%;
+}
+
+/* Movie Details Styles */
+.ui.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.meta {
+    color: #777;
+    font-size: 16px;
+}
+
+.description {
+    padding: 20px;
+}
+
+.ui.label {
+    margin-right: 5px;
+}
+
+/* Button Styles */
+.ui.orange.button {
+    background-color: #ff5733;
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .ui.centered.grid {
+        flex-direction: column;
+    }
+
+    .four.wide.column {
+        margin-left: 10%;
+        width: 100%;
+    }
+}
