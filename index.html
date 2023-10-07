@@ -12,49 +12,43 @@
 <body>
     <!-- Navigation Bar -->
     <div class="heading">
-        <div class="item">
+        <div id="item">
             <h2 class="ui header">
-                <div class="content"><span id="spanhead">FLATDANGO </span>  MOVIE THEATRE</div><br><br>
-                <div class="sub header" id="subtitle">PURCHASE MOVIE TICKETS</div>
+                <div id="content"><span id="spanhead">FLATDANGO</span>  MOVIE THEATRE</div><br>
+                <div id="subtitle">PURCHASE MOVIE TICKETS</div>
             </h2>
         </div>
     </div>
 
-    <div class="ui centered grid">
-        <div class="four wide column">
-            <div class="list-container">
-                <!-- Left Menu -->
-                <h3> MOVIE LIST</h3>
-                <ul class="ui divided list" id="films">
-                </ul>
-            </div>
+    <div class="centeredgrid">
+        <div id="leftmenu">
+            <!-- Left Menu -->
+            <h3> MOVIE LIST</h3>
+            <ul id="dividedlist" id="films">
+            </ul>
         </div>
-
         <!-- Front Display -->
-        <div class="four wide column">
-            Display movie info here
+        <div id="buymovie">
+            <h2>MOVIE DETAILS</h2>
         </div>
-
         <!-- Movie Details -->
-        <div class="four wide column">
-            <div class="ui cards" id="showing">
-                <div class="card">
-                    <div id="title" class="title">[MOVIE TITLE]</div>
-                    <div id="runtime" class="meta">[RUNTIME] minutes</div>
-                    <div class="content">
-                        <div class="description">
-                            <div id="film-info">[INSERT MOVIE DESCRIPTION HERE]</div>
-                            <span id="showtime" class="ui label">[SHOWTIME]</span>
-                            <span id="ticket-num">[X]</span> remaining tickets
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <button id="buy-ticket" class="ui orange button">PURCHASE Ticket</button>
-                    </div>
-                </div>
+        <div id="purchase">
+            <div id="title" class="title">[MOVIE TITLE]</div>
+            <div id="runtime" class="meta">[RUNTIME] minutes</div>
+            <div id="film-info">[MOVIE DESCRIPTION]
+                <span id="showtime" class="ui label">[SHOWTIME]</span>
+                <span id="ticket-num">[X]</span> remaining tickets
+            </div>
+            <div id="extracontent">
+                <button id="buyticket">PURCHASE TICKET</button>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="copyright">
+            &copy; 2023 MARKSWELL-CRYPTO. All Rights Reserved.
+        </div>    
+    </footer>
     <script src="./src/index.js"></script>
 </body>
 </html>

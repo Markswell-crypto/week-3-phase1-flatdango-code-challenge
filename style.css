@@ -1,8 +1,9 @@
-/* global styling here */
+/* Global Styles */
 body {
-    background-color: #1c2851;
-    font-family: 'Times New Roman', Times;
-    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cd4343;
 }
 
 /* Navigation Bar Styles */
@@ -11,10 +12,14 @@ body {
     padding: 20px;
     text-align: center;
     color: white;
-    height: 20%;
-    font-family: monospace;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
+#content{
+    font-size: 40px;
+    font-family: cursive;
+}
+
 #spanhead{
     width: auto;
     background-color: beige;
@@ -22,45 +27,79 @@ body {
     font-family: fantasy;
     font-style: italic;
     font-size: 40px;
+    font-weight: 100;
 }
 #subtitle {
     font-size: 18px;
-    color:rgb(80, 22, 15);
+    color: rgb(80, 22, 15);
     font-weight: 600;
     font-style: italic;
     font-family: cursive;
 }
-h3{
+
+h3 {
     font-size: 18px;
-    color:rgb(80, 22, 15);
+    color: rgb(80, 22, 15);
     font-weight: 600;
     font-family: cursive;
     text-align: center;
 }
-
+.centeredgrid {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    height: max-content;
+    padding: 10px;
+    font-family: monospace;
+    align-items: center;
+}
 /* Left Menu Styles */
-.list-container {
+#leftmenu {
     background-color: #fff;
+    border: 2px solid #3c2525;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-left: 1%;
+    width: 20%;
+}
+#purchase{
+    background-color: rgb(174, 38, 38);
     border: 1px solid #ddd;
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin-left: 10%;
+    margin-right: 1%;
+    width: 20%;
+    color:rgb(36, 2, 36)
+}
+#dividedlist {
+    list-style: none;
+    padding: 0;
 }
 
-/* Movie Details Styles */
-.ui.cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#dividedlist li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
 }
 
-.card {
-    width: 100%;
-    max-width: 350px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    background-color: #fff;
+#dividedlist a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+#dividedlist a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Main Content Styles */
+#buymovie {
+    background-color: bisque;
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-content: center;
 }
 
 .title {
@@ -70,32 +109,52 @@ h3{
 }
 
 .meta {
-    color: #777;
     font-size: 16px;
 }
 
-.description {
-    padding: 20px;
+#film-info {
+    padding: 10px;
 }
 
 .ui.label {
     margin-right: 5px;
 }
 
-/* Button Styles */
-.ui.orange.button {
-    background-color: #ff5733;
+#buyticket {
+    background-color: #b6624f;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#buyticket:hover {
+    background-color: #421b13;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .ui.centered.grid {
-        flex-direction: column;
+    #leftmenu {
+        width: 100%;
+        margin-left: 0;
     }
 
-    .four.wide.column {
-        margin-left: 10%;
+    #buymovie {
         width: 100%;
+        margin-left: 0;
     }
+}
+
+footer {
+    margin-bottom: 5px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.copyright {
+    font-size: 14px;
 }
