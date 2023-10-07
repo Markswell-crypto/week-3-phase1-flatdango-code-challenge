@@ -69,8 +69,41 @@ h3 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     margin-right: 1%;
     width: 20%;
-    color:rgb(36, 2, 36)
+    color:rgb(36, 2, 36); 
+    text-align: center;
 }
+/* Styling for the purchase section */
+#purchase .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+#poster{
+    height: 600px;
+    width: 690px;
+}
+#purchase .meta {
+    color: #777;
+    font-size: 18px;
+}
+
+#purchase #film-info {
+    padding: 10px;
+}
+
+#purchase #showtime.ui.label {
+    background-color: #f2711c; /* Orange background color */
+    color: white;
+    font-size: 16px;
+    margin-right: 5px;
+    padding: 5px 10px;
+}
+
+#purchase #ticket-num {
+    font-size: 16px;
+    color: #333;
+}
+
 #dividedlist {
     list-style: none;
     padding: 0;
