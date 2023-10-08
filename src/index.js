@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    function fetchMovies(){
 // Fetch and display the list of movies in the left menu
     fetch("http://localhost:3000/films")
         .then((res) => res.json())
@@ -40,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             buyTicketButton.textContent = "PURCHASE TICKET";
 
 // Add a click event listener to the "Buy Ticket" button
-                            buyTicketButton.addEventListener("click", () => {
+                            buyTicketButton.addEventListener("click", (e) => {
+                                e.preventDefault()
 // Check if there are available tickets
                                 if (availableTickets > 0) {
 // Decrement tickets_sold count
@@ -77,4 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) => {
             console.error("Error fetching movie list:", error);
         });
+    }
+    
 });
