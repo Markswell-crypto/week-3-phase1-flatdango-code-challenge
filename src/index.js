@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Fetch and display the list of movies
+// Fetch and display the list of movies in the left menu
     fetch("http://localhost:3000/films")
         .then((res) => res.json())
         .then((movies) => {
             const movieList = document.getElementById("dividedlist");
 
             movies.forEach((movie) => {
-                // Create a new list item for each movie
+// Create a new list item for each movie in the left menu
                 const filmListItem = document.createElement("li");
                 filmListItem.textContent = movie.title;
 
-                // Add a click event listener to each movie list item
+// Add a click event listener to each movie list item
                 filmListItem.addEventListener("click", () => {
-                    // Fetch and display the details of the clicked movie
+// Fetch and display the details of the clicked movie in the center grid
                     fetch(`http://localhost:3000/films/${movie.id}`)
                         .then((response) => response.json())
                         .then((movieData) => {
@@ -24,42 +24,42 @@ document.addEventListener("DOMContentLoaded", () => {
                             const ticketsAvailable = document.getElementById("tickets-available");
                             const buyTicketButton = document.getElementById("buyticket");
 
-                            // Populate HTML elements with movie data
+// Populate HTML elements with movie data in the center grid
                             poster.src = movieData.poster;
                             title.textContent = "Title: " + movieData.title;
                             description.textContent = "Description: " + movieData.description;
                             runtime.textContent = "Runtime: " + movieData.runtime + " minutes";
                             showtime.textContent = "Showtime: " + movieData.showtime;
 
-                            // Calculate available tickets by subtracting tickets_sold from capacity
+// Calculate available tickets by subtracting tickets_sold from capacity
                             let availableTickets = movieData.capacity - movieData.tickets_sold;
                             ticketsAvailable.textContent = "Tickets Available: " + availableTickets;
 
-                            // Enable the "Buy Ticket" button
+// Enable the "Buy Ticket" button
                             buyTicketButton.disabled = false;
                             buyTicketButton.textContent = "PURCHASE TICKET";
 
-                            // Add a click event listener to the "Buy Ticket" button
+// Add a click event listener to the "Buy Ticket" button
                             buyTicketButton.addEventListener("click", () => {
-                                // Check if there are available tickets
+// Check if there are available tickets
                                 if (availableTickets > 0) {
-                                    // Decrement tickets_sold count
+// Decrement tickets_sold count
                                     movieData.tickets_sold++;
 
-                                    // Update available tickets
+// Update available tickets
                                     availableTickets--;
 
-                                    // Update the frontend to reflect the changes
+// Update the frontend to reflect the changes
                                     ticketsAvailable.textContent = "Tickets Available: " + availableTickets;
 
-                                    // Check if all tickets are sold out
+// Check if all tickets are sold out
                                     if (availableTickets === 0) {
-                                        // Disable the "Buy Ticket" button
+// Disable the "Buy Ticket" button
                                         buyTicketButton.disabled = true;
                                         buyTicketButton.textContent = "Sold Out";
                                     }
                                 } else {
-                                    // No available tickets
+// No available tickets
                                     buyTicketButton.disabled = true;
                                     buyTicketButton.textContent = "Sold Out";
                                 }
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         });
                 });
 
-                // Append the list item to the movieList
+// Append the list item to the movieList in the left menu
                 movieList.appendChild(filmListItem);
             });
         })
